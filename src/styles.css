@@ -167,7 +167,8 @@ pre {
 }
 
 .button:active,
-.copy-button:active {
+.copy-button:active,
+.snippet-copy-button:active {
   transform: translateY(1px);
 }
 
@@ -211,6 +212,10 @@ pre {
   animation: hero-enter 760ms var(--ease-out) both;
 }
 
+.hero-copy {
+  min-width: 0;
+}
+
 .hero-visual {
   animation-delay: 120ms;
 }
@@ -241,6 +246,119 @@ pre {
   color: var(--muted);
   font-size: clamp(1.05rem, 1.5vw, 1.25rem);
   line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 100%;
+}
+
+.install-snippet {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) 2.75rem;
+  align-items: center;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 3rem;
+  flex: 1 1 19rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--muted);
+  transition:
+    border-color 220ms var(--ease-out),
+    background-color 220ms var(--ease-out);
+}
+
+.install-snippet:hover,
+.install-snippet:focus-within {
+  border-color: var(--line-active);
+  background: var(--surface-raised);
+}
+
+.install-prompt {
+  padding-left: 0.9rem;
+  color: var(--quiet);
+  font-family: "JetBrains Mono Variable", ui-monospace, monospace;
+  font-size: 0.75rem;
+}
+
+.install-snippet code {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  padding-inline: 0.55rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.snippet-copy-button {
+  position: relative;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 0;
+  border-left: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition:
+    transform 180ms var(--ease-out),
+    background-color 220ms var(--ease-out),
+    color 220ms var(--ease-out);
+}
+
+.snippet-copy-button:hover {
+  background: rgb(59 130 246 / 0.08);
+  color: var(--ink);
+}
+
+.snippet-copy-button[data-state="copied"] {
+  color: var(--positive);
+}
+
+.snippet-copy-button[data-state="error"] {
+  color: var(--caution);
+}
+
+.copy-glyph {
+  position: relative;
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.copy-glyph::before,
+.copy-glyph::after {
+  position: absolute;
+  width: 0.58rem;
+  height: 0.68rem;
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+  content: "";
+}
+
+.copy-glyph::before {
+  top: 0;
+  left: 0;
+}
+
+.copy-glyph::after {
+  right: 0;
+  bottom: 0;
+  background: var(--surface);
+}
+
+.install-snippet:hover .copy-glyph::after,
+.install-snippet:focus-within .copy-glyph::after {
+  background: var(--surface-raised);
 }
 
 .logo-frame {
@@ -719,8 +837,8 @@ pre {
   }
 
   .hero-grid {
-    gap: 1.5rem;
-    padding-block: 2rem;
+    gap: 1rem;
+    padding-block: 1.5rem;
   }
 
   .hero-copy h1 {
@@ -728,8 +846,22 @@ pre {
     font-size: clamp(2.65rem, 12vw, 3.25rem);
   }
 
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .install-snippet {
+    width: 100%;
+    flex-basis: auto;
+  }
+
   .hero-visual {
-    width: min(58vw, 13.5rem);
+    width: min(46vw, 10.5rem);
     justify-self: center;
   }
 

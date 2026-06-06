@@ -10,6 +10,9 @@ export const installCommand = `npx skills add crousty24-bit/code-quality-guardia
   --agent codex \\
   --yes`
 
+export const quickInstallCommand =
+  'npx skills add crousty24-bit/code-quality-guardian-skill'
+
 export const facts = [
   { value: '0.1.0-beta.1', label: 'Published version' },
   { value: 'MIT', label: 'Open-source license' },
@@ -113,4 +116,3 @@ export const limitations = [
   'Compatibility outside the documented ecosystems is best effort.',
   'Specialist orchestration still needs broader comparative testing.',
 ] as const
-

@@ -1,4 +1,5 @@
 import { links } from '../content'
+import { InstallSnippet } from './InstallSnippet'
 
 export function Hero() {
   return (
@@ -10,14 +11,17 @@ export function Hero() {
           <p className="hero-summary">
             Constrain scope, preserve intended behavior, and report verification honestly.
           </p>
-          <a
-            className="button button-primary min-h-12"
-            href={links.github}
-            target="_blank"
-            rel="noreferrer"
-          >
-            View on GitHub
-          </a>
+          <div className="hero-actions">
+            <a
+              className="button button-primary min-h-12"
+              href={links.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              View on GitHub
+            </a>
+            <InstallSnippet />
+          </div>
         </div>
 
         <div className="hero-visual" aria-label="Code Quality Guardian owl logo">
@@ -35,4 +39,3 @@ export function Hero() {
     </section>
   )
 }
-
