@@ -36,7 +36,8 @@ clarity of an open-source technical product."
 The page uses a full-width canvas with a centered `1200px` content boundary.
 
 1. Compact header with brand, anchor navigation, and GitHub link.
-2. Full-viewport asymmetric hero with copy on the left and logo on the right.
+2. Full-viewport asymmetric hero with copy and quick-install action on the left,
+   and the logo on the right.
 3. Fact strip with four verified project facts.
 4. Problem section using an asymmetric list, not equal feature cards.
 5. Workflow section showing six intervention verbs in a clear sequence.
@@ -134,6 +135,12 @@ control.
 
 Use Deep Surface, JetBrains Mono, one structural border, and a visible copy button.
 States are Copy, Copied, and Copy failed. Do not simulate terminal output.
+
+### Quick Install Snippet
+
+Place the short skills.sh installation command beside the primary hero action. Use
+a compact code surface, a `$` prompt, single-line truncation, and a 44px copy
+target. The full command remains accessible through the code title and copy action.
 
 ## 6. Responsive Behavior
 

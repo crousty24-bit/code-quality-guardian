@@ -55,6 +55,7 @@ After changing code:
 - `src/App.tsx`: page composition and section order.
 - `src/content.ts`: verified links, installation command, facts, and copy data.
 - `src/components/`: focused page sections and small interaction components.
+- `src/hooks/useCopyText.ts`: shared clipboard behavior for installation commands.
 - `src/styles.css`: Tailwind import, semantic tokens, global styles, responsive
   rules, and motion preferences.
 - `public/logo.png`: official Code Quality Guardian logo.
@@ -148,4 +149,3 @@ current project state.
 - Do not revert user changes.
 - Keep generated `dist/` and `node_modules/` out of Git.
 - Keep changes focused on the requested outcome.
-

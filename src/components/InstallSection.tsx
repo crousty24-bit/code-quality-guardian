@@ -1,53 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
 import { installCommand, links } from '../content'
+import { useCopyText } from '../hooks/useCopyText'
 import { Reveal } from './Reveal'
 
-type CopyState = 'idle' | 'copied' | 'error'
-
-function copyWithSelection(text: string) {
-  const textArea = document.createElement('textarea')
-  textArea.value = text
-  textArea.setAttribute('readonly', '')
-  textArea.style.position = 'fixed'
-  textArea.style.opacity = '0'
-  document.body.appendChild(textArea)
-  textArea.select()
-  const copied = document.execCommand('copy')
-  textArea.remove()
-
-  if (!copied) throw new Error('Copy command was rejected')
-}
-
 export function InstallSection() {
-  const [copyState, setCopyState] = useState<CopyState>('idle')
-  const timerRef = useRef<number | undefined>(undefined)
-
-  useEffect(
-    () => () => {
-      if (timerRef.current) window.clearTimeout(timerRef.current)
-    },
-    [],
-  )
-
-  async function copyCommand() {
-    try {
-      if (navigator.clipboard?.writeText) {
-        try {
-          await navigator.clipboard.writeText(installCommand)
-        } catch {
-          copyWithSelection(installCommand)
-        }
-      } else {
-        copyWithSelection(installCommand)
-      }
-      setCopyState('copied')
-    } catch {
-      setCopyState('error')
-    }
-
-    if (timerRef.current) window.clearTimeout(timerRef.current)
-    timerRef.current = window.setTimeout(() => setCopyState('idle'), 2200)
-  }
+  const { copy, copyState } = useCopyText(installCommand)
 
   const copyLabel =
     copyState === 'copied' ? 'Copied' : copyState === 'error' ? 'Copy failed' : 'Copy'
@@ -77,7 +33,7 @@ export function InstallSection() {
             <button
               className="copy-button"
               type="button"
-              onClick={copyCommand}
+              onClick={copy}
               aria-live="polite"
             >
               {copyLabel}
