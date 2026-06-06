@@ -49,4 +49,3 @@ export function useCopyText(text: string) {
 
   return { copy, copyState }
 }
-

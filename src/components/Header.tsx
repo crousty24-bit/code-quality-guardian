@@ -11,7 +11,7 @@ export function Header() {
     <header className="site-header">
       <div className="page-shell flex h-16 items-center justify-between gap-6">
         <a className="brand-link" href="#top" aria-label="Code Quality Guardian home">
-          <img src="/logo.png" alt="" width="36" height="36" />
+          <img src="/logo-96.webp" alt="" width="36" height="36" />
           <span>Code Quality Guardian</span>
         </a>
 
@@ -35,4 +35,3 @@ export function Header() {
     </header>
   )
 }
-

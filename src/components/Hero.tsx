@@ -16,10 +16,12 @@ export function Hero() {
         <div className="hero-visual" aria-label="Code Quality Guardian owl logo">
           <div className="logo-frame">
             <img
-              src="/logo.png"
+              src="/logo-1000.webp"
+              srcSet="/logo-480.webp 480w, /logo-1000.webp 1000w"
+              sizes="(max-width: 400px) 56vw, (max-width: 767px) 224px, (max-width: 1200px) 40vw, 500px"
               alt="Code Quality Guardian owl holding a code shield"
-              width="1254"
-              height="1254"
+              width="1000"
+              height="1000"
               fetchPriority="high"
             />
           </div>

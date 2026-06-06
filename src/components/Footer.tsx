@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="page-shell footer-grid">
         <div className="footer-brand">
-          <img src="/logo.png" alt="" width="32" height="32" loading="lazy" />
+          <img src="/logo-96.webp" alt="" width="32" height="32" loading="lazy" />
           <span>Code Quality Guardian</span>
         </div>
         <div className="footer-links">

@@ -18,7 +18,7 @@
   --surface-raised: #111722;
   --ink: #f4f7fb;
   --muted: #9aa4b2;
-  --quiet: #697586;
+  --quiet: #748196;
   --line: #202938;
   --line-active: #334155;
   --accent: #3b82f6;
@@ -178,12 +178,12 @@ pre {
 }
 
 .button-primary {
-  background: var(--accent);
+  background: #2563eb;
   color: #fff;
 }
 
 .button-primary:hover {
-  background: #2563eb;
+  background: #1d4ed8;
 }
 
 .button-secondary {
