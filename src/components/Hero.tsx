@@ -11,17 +11,6 @@ export function Hero() {
           <p className="hero-summary">
             Constrain scope, preserve intended behavior, and report verification honestly.
           </p>
-          <div className="hero-actions">
-            <a
-              className="button button-primary min-h-12"
-              href={links.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              View on GitHub
-            </a>
-            <InstallSnippet />
-          </div>
         </div>
 
         <div className="hero-visual" aria-label="Code Quality Guardian owl logo">
@@ -34,6 +23,18 @@ export function Hero() {
               fetchPriority="high"
             />
           </div>
+        </div>
+
+        <div className="hero-actions">
+          <a
+            className="button button-primary min-h-12"
+            href={links.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            View on GitHub
+          </a>
+          <InstallSnippet />
         </div>
       </div>
     </section>

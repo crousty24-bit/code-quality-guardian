@@ -15,7 +15,9 @@ export function InstallSnippet() {
       <span className="install-prompt" aria-hidden="true">
         $
       </span>
-      <code title={quickInstallCommand}>{quickInstallCommand}</code>
+      <code title={quickInstallCommand} translate="no">
+        {quickInstallCommand}
+      </code>
       <button
         className="snippet-copy-button"
         type="button"
@@ -36,4 +38,3 @@ export function InstallSnippet() {
     </div>
   )
 }
-
