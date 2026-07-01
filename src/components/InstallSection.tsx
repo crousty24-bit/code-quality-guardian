@@ -12,10 +12,10 @@ export function InstallSection() {
     <section className="section" id="install">
       <div className="page-shell install-grid">
         <Reveal className="install-copy">
-          <h2>Install it where scope discipline matters.</h2>
+          <h2>Install it where intervention risk matters.</h2>
           <p>
-            Add the skill to the current project for Codex, then invoke it explicitly
-            with <code>$code-quality-guardian</code>.
+            Add the skill to Codex, then invoke it explicitly with{' '}
+            <code>$code-quality-guardian</code> when a change needs bounded execution.
           </p>
           <div className="link-row">
             <a href={links.skills} target="_blank" rel="noreferrer">

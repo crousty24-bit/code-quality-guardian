@@ -1,20 +1,21 @@
 import { links } from '../content'
 import { InstallSnippet } from './InstallSnippet'
+import { MagicBentoGrid } from './MagicBentoGrid'
 
 export function Hero() {
   return (
     <section id="top" className="hero-section">
-      <div className="page-shell hero-grid">
+      <MagicBentoGrid className="page-shell hero-grid">
         <div className="hero-copy">
           <p className="eyebrow">Agent Skill for existing codebases</p>
-          <h1>Make coding agents change less, but better.</h1>
+          <h1>Govern how coding agents change code.</h1>
           <p className="hero-summary">
-            Constrain scope, preserve intended behavior, and report verification honestly.
+            Inspect first, classify risk, bound the diff, and report verification honestly.
           </p>
         </div>
 
         <div className="hero-visual" aria-label="Code Quality Guardian owl logo">
-          <div className="logo-frame">
+          <div className="logo-frame magic-bento-card">
             <img
               src="/logo-1000.webp"
               srcSet="/logo-480.webp 480w, /logo-1000.webp 1000w"
@@ -38,7 +39,7 @@ export function Hero() {
           </a>
           <InstallSnippet />
         </div>
-      </div>
+      </MagicBentoGrid>
     </section>
   )
 }

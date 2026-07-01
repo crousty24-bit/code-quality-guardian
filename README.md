@@ -26,7 +26,7 @@ an Agent Skill that disciplines how coding agents intervene in existing codebase
 
 The page explains the skill's central promise:
 
-> Make coding agents change less, but better.
+> Govern how coding agents change code.
 
 It presents the problem, intervention workflow, risk classification, verified
 installation command, and current experimental status without becoming a full
@@ -36,9 +36,8 @@ documentation site.
 
 The landing page is in its first implementation pass.
 
-The skill version presented by the site is `0.1.0-beta.1`, an experimental MVP
-that has been field-tested primarily with Codex. It is not presented as a stable
-release.
+The skill version presented by the site is `0.2.0-beta.1`, an experimental beta
+that has completed two field-test phases. It is not presented as a stable release.
 
 ## Technology
 
@@ -140,6 +139,8 @@ When updating copy:
 - verify facts against the skill repository;
 - keep the installation command accurate;
 - preserve the experimental beta positioning;
+- preserve the published version `0.2.0-beta.1` until the source project
+  publishes a different release;
 - do not claim guaranteed behavior preservation;
 - do not claim universal agent compatibility;
 - do not present unexecuted checks as successful.

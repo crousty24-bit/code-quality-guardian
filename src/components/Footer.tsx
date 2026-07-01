@@ -19,7 +19,7 @@ export function Footer() {
             README
           </a>
         </div>
-        <p>MIT licensed. Built for careful intervention.</p>
+        <p>MIT licensed. Built for disciplined intervention.</p>
       </div>
     </footer>
   )

@@ -14,59 +14,59 @@ export const quickInstallCommand =
   'npx skills add crousty24-bit/code-quality-guardian-skill'
 
 export const facts = [
-  { value: '0.1.0-beta.1', label: 'Published version' },
+  { value: '0.2.0-beta.1', label: 'Current beta' },
+  { value: '31', label: 'Automated tests' },
+  { value: '5', label: 'Read-only evidence scripts' },
   { value: 'MIT', label: 'Open-source license' },
-  { value: '26', label: 'Automated tests' },
-  { value: 'skills.sh', label: 'Publicly indexed' },
 ] as const
 
 export const problems = [
   {
-    title: 'Scope creep',
+    title: 'Agent overproduction',
     description:
-      'A focused request becomes a broad rewrite that changes more than the outcome requires.',
+      'A focused request becomes extra files, broad refactors, or abstractions the codebase did not ask for.',
   },
   {
-    title: 'Premature structure',
+    title: 'Hidden execution risk',
     description:
-      'New files, layers, and abstractions appear before the codebase proves they are needed.',
+      'A local outcome can still touch persistence, authorization, migrations, contracts, or concurrency.',
   },
   {
     title: 'Foreign architecture',
     description:
-      'The agent imports patterns that conflict with the project already in front of it.',
+      'The agent imports patterns, dependencies, or conventions that conflict with the project in front of it.',
   },
   {
     title: 'Unverified confidence',
     description:
-      'A plausible answer is reported as complete without the checks needed to support it.',
+      'The work is reported as complete without separating checks that ran from evidence still missing.',
   },
 ] as const
 
 export const workflow = [
   {
     verb: 'Observe',
-    description: 'Read the repository, contracts, conventions, and available checks.',
+    description: 'Read the repository, contracts, conventions, and candidate checks before editing.',
   },
   {
     verb: 'Diagnose',
-    description: 'Separate verified facts, evidence, inference, and unknowns.',
+    description: 'Separate facts, evidence, inference, and unknowns before deciding risk.',
   },
   {
     verb: 'Propose',
-    description: 'Define the smallest justified change and a clear stop condition.',
+    description: 'Set the intervention class, stop condition, and smallest justified action.',
   },
   {
     verb: 'Change',
-    description: 'Preserve unrelated behavior and keep the implementation bounded.',
+    description: 'Keep the business outcome bounded while adding only necessary discipline.',
   },
   {
     verb: 'Verify',
-    description: 'Run relevant checks and report their actual results.',
+    description: 'Run relevant checks and report exactly what passed, failed, or stayed untested.',
   },
   {
     verb: 'Summarize',
-    description: 'State what changed, what did not, and what remains uncertain.',
+    description: 'State what changed, what stayed untouched, and what remains uncertain.',
   },
 ] as const
 
@@ -76,7 +76,7 @@ export const riskLevels = [
     name: 'Local',
     decision: 'Stay local',
     description:
-      'One layer, stable contracts, and a targeted verification path.',
+      'One layer, stable contracts, no migration, and a targeted verification path.',
   },
   {
     level: 'Level 2',
@@ -90,29 +90,30 @@ export const riskLevels = [
     name: 'Specialized',
     decision: 'Delegate execution',
     description:
-      'Security, migration, concurrency, public API, or material performance risk is involved.',
+      'Security, authorization, migration, concurrency, public API, or performance risk is material.',
   },
 ] as const
 
 export const isList = [
-  'A lightweight intervention discipline',
-  'A guardrail against agent overproduction',
-  'An evidence-based diagnostic method',
-  'A framework for honest verification',
-  'A scope owner when specialist skills are needed',
+  'An intervention governor for coding agents',
+  'A risk-classification layer before editing',
+  'A scope owner across local, coordinated, and specialized work',
+  'A read-only evidence-gathering discipline',
+  'A verification reporting standard',
 ] as const
 
 export const isNotList = [
-  'A complete clean-code handbook',
+  'A Clean Code, SOLID, or refactoring checklist',
   'A static analyzer or automatic fixer',
-  'An architecture framework',
-  'A replacement for TDD or code review',
-  'A security, migration, or performance expert',
+  'A guarantee that every diff is smaller',
+  'A replacement for TDD, code review, or specialist skills',
+  'A universal framework detector or stable product',
 ] as const
 
 export const limitations = [
   'Comparative improvement over the same agent without the skill is not yet proven.',
-  'Heuristic scanners can produce false positives.',
-  'Compatibility outside the documented ecosystems is best effort.',
+  'Heuristic function scanning can produce false positives.',
+  'Framework detection is targeted, not universal.',
   'Specialist orchestration still needs broader comparative testing.',
+  'Compatibility outside documented ecosystems is best effort.',
 ] as const
