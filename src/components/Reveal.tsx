@@ -1,11 +1,10 @@
-import { useEffect, useRef, type ReactNode } from 'react'
+import { useEffect, useRef, type HTMLAttributes, type ReactNode } from 'react'
 
-type RevealProps = {
+type RevealProps = HTMLAttributes<HTMLDivElement> & {
   children: ReactNode
-  className?: string
 }
 
-export function Reveal({ children, className = '' }: RevealProps) {
+export function Reveal({ children, className = '', ...props }: RevealProps) {
   const elementRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -31,9 +30,8 @@ export function Reveal({ children, className = '' }: RevealProps) {
   }, [])
 
   return (
-    <div ref={elementRef} className={`reveal ${className}`.trim()}>
+    <div ref={elementRef} className={`reveal ${className}`.trim()} {...props}>
       {children}
     </div>
   )
 }
-

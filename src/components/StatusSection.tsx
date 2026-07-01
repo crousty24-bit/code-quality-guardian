@@ -8,12 +8,13 @@ export function StatusSection() {
         <Reveal className="status-grid">
           <div>
             <p className="status-label">Experimental beta</p>
-            <h2>Publicly usable. Still under active evaluation.</h2>
+            <h2>Field-tested. Still under active evaluation.</h2>
           </div>
           <div className="status-details">
             <p>
-              Version 0.1.0-beta.1 has been field-tested, primarily with Codex. It is
-              not presented as a stable release.
+              Version 0.2.0-beta.1 reflects two field-test phases, stronger risk
+              classification, Rails/Ruby and Rust/Tauri evidence support, and read-only
+              script guardrails. It is not presented as a stable release.
             </p>
             <ul>
               {limitations.map((limitation) => (
@@ -29,4 +30,3 @@ export function StatusSection() {
     </section>
   )
 }
-

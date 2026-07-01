@@ -9,7 +9,13 @@ type DefinitionListProps = {
 
 function DefinitionList({ title, items, emphasized = false }: DefinitionListProps) {
   return (
-    <div className={emphasized ? 'definition-column definition-primary' : 'definition-column'}>
+    <div
+      className={
+        emphasized
+          ? 'definition-column definition-primary magic-bento-card'
+          : 'definition-column magic-bento-card'
+      }
+    >
       <h3>{title}</h3>
       <ul>
         {items.map((item) => (
@@ -25,7 +31,7 @@ export function DefinitionSection() {
     <section className="section section-tonal" id="definition">
       <div className="page-shell">
         <Reveal className="section-heading section-heading-narrow">
-          <h2>Scope control, not a universal quality checklist.</h2>
+          <h2>An intervention governor, not a checklist.</h2>
         </Reveal>
 
         <Reveal className="definition-grid">
@@ -36,4 +42,3 @@ export function DefinitionSection() {
     </section>
   )
 }
-

@@ -5,7 +5,7 @@ export function FactStrip() {
     <section className="fact-strip" aria-label="Project facts">
       <div className="page-shell fact-grid">
         {facts.map((fact) => (
-          <div className="fact" key={fact.label}>
+          <div className="fact magic-bento-card" key={fact.label}>
             <strong>{fact.value}</strong>
             <span>{fact.label}</span>
           </div>
@@ -14,4 +14,3 @@ export function FactStrip() {
     </section>
   )
 }
-

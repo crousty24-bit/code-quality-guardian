@@ -68,7 +68,7 @@ they remove real duplication or enforce an existing invariant.
 
 - Visible copy is English.
 - Keep claims supportable by the skill audit or repository README.
-- Preserve the published version `0.1.0-beta.1` until the source project publishes
+- Preserve the published version `0.2.0-beta.1` until the source project publishes
   a different release.
 - Present the project as an experimental beta, not a stable product.
 - Preserve the verified installation command in `src/content.ts`.

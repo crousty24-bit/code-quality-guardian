@@ -7,9 +7,9 @@ export function Hero() {
       <div className="page-shell hero-grid">
         <div className="hero-copy">
           <p className="eyebrow">Agent Skill for existing codebases</p>
-          <h1>Make coding agents change less, but better.</h1>
+          <h1>Govern how coding agents change code.</h1>
           <p className="hero-summary">
-            Constrain scope, preserve intended behavior, and report verification honestly.
+            Inspect first, classify risk, bound the diff, and report verification honestly.
           </p>
         </div>
 
