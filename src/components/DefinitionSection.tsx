@@ -1,5 +1,4 @@
 import { isList, isNotList } from '../content'
-import { MagicBentoGrid } from './MagicBentoGrid'
 import { Reveal } from './Reveal'
 
 type DefinitionListProps = {
@@ -35,10 +34,10 @@ export function DefinitionSection() {
           <h2>An intervention governor, not a checklist.</h2>
         </Reveal>
 
-        <MagicBentoGrid reveal className="definition-grid">
+        <Reveal className="definition-grid">
           <DefinitionList title="What it is" items={isList} emphasized />
           <DefinitionList title="What it is not" items={isNotList} />
-        </MagicBentoGrid>
+        </Reveal>
       </div>
     </section>
   )

@@ -1,5 +1,4 @@
 import { problems } from '../content'
-import { MagicBentoGrid } from './MagicBentoGrid'
 import { Reveal } from './Reveal'
 
 export function ProblemSection() {
@@ -14,7 +13,7 @@ export function ProblemSection() {
           </p>
         </Reveal>
 
-        <MagicBentoGrid className="problem-list">
+        <div className="problem-list">
           {problems.map((problem, index) => (
             <Reveal
               className={`problem-item problem-item-${index + 1} magic-bento-card`}
@@ -29,7 +28,7 @@ export function ProblemSection() {
               </div>
             </Reveal>
           ))}
-        </MagicBentoGrid>
+        </div>
       </div>
     </section>
   )

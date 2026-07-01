@@ -4,6 +4,7 @@ import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { InstallSection } from './components/InstallSection'
+import { MagicBentoGrid } from './components/MagicBentoGrid'
 import { ProblemSection } from './components/ProblemSection'
 import { RiskLevels } from './components/RiskLevels'
 import { StatusSection } from './components/StatusSection'
@@ -11,7 +12,7 @@ import { WorkflowSection } from './components/WorkflowSection'
 
 export default function App() {
   return (
-    <>
+    <MagicBentoGrid className="page-bento-shell">
       <a className="skip-link" href="#main">
         Skip to content
       </a>
@@ -27,7 +28,6 @@ export default function App() {
         <StatusSection />
       </main>
       <Footer />
-    </>
+    </MagicBentoGrid>
   )
 }
-

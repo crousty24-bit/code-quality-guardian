@@ -3,19 +3,18 @@ import type {
   HTMLAttributes,
   PointerEvent as ReactPointerEvent,
 } from 'react'
-import { Reveal } from './Reveal'
 
 type BentoStyle = CSSProperties & {
   '--bento-x'?: string
   '--bento-y'?: string
+  '--bento-screen-x'?: string
+  '--bento-screen-y'?: string
   '--bento-spotlight-opacity'?: string
   '--bento-tilt-x'?: string
   '--bento-tilt-y'?: string
 }
 
-type MagicBentoGridProps = HTMLAttributes<HTMLDivElement> & {
-  reveal?: boolean
-}
+type MagicBentoGridProps = HTMLAttributes<HTMLDivElement>
 
 function isMotionDisabled(event: ReactPointerEvent<HTMLDivElement>) {
   return (
@@ -50,6 +49,8 @@ function updateCards(container: HTMLDivElement, event: ReactPointerEvent<HTMLDiv
 
   container.style.setProperty('--bento-x', `${x}px`)
   container.style.setProperty('--bento-y', `${y}px`)
+  container.style.setProperty('--bento-screen-x', `${event.clientX}px`)
+  container.style.setProperty('--bento-screen-y', `${event.clientY}px`)
   container.style.setProperty('--bento-spotlight-opacity', '1')
   container.style.setProperty('--bento-tilt-x', `${tiltX.toFixed(3)}deg`)
   container.style.setProperty('--bento-tilt-y', `${tiltY.toFixed(3)}deg`)
@@ -71,7 +72,6 @@ function updateCards(container: HTMLDivElement, event: ReactPointerEvent<HTMLDiv
 export function MagicBentoGrid({
   children,
   className = '',
-  reveal = false,
   style,
   onPointerMove,
   onPointerLeave,
@@ -81,6 +81,8 @@ export function MagicBentoGrid({
   const rootStyle: BentoStyle = {
     '--bento-x': '50%',
     '--bento-y': '50%',
+    '--bento-screen-x': '50vw',
+    '--bento-screen-y': '50vh',
     '--bento-spotlight-opacity': '0',
     '--bento-tilt-x': '0deg',
     '--bento-tilt-y': '0deg',
@@ -104,10 +106,6 @@ export function MagicBentoGrid({
     style: rootStyle,
     onPointerMove: handlePointerMove,
     onPointerLeave: handlePointerLeave,
-  }
-
-  if (reveal) {
-    return <Reveal {...rootProps}>{children}</Reveal>
   }
 
   return <div {...rootProps}>{children}</div>

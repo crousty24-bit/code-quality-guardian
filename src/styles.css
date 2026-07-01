@@ -100,9 +100,15 @@ pre {
   isolation: isolate;
   --bento-x: 50%;
   --bento-y: 50%;
+  --bento-screen-x: 50vw;
+  --bento-screen-y: 50vh;
   --bento-spotlight-opacity: 0;
   --bento-tilt-x: 0deg;
   --bento-tilt-y: 0deg;
+}
+
+.page-bento-shell {
+  min-height: 100dvh;
 }
 
 .magic-bento-grid::before {
@@ -121,6 +127,24 @@ pre {
   opacity: 0;
   pointer-events: none;
   transition: opacity 220ms var(--ease-out);
+}
+
+.magic-bento-grid::after {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  background:
+    radial-gradient(
+      circle 20rem at var(--bento-screen-x) var(--bento-screen-y),
+      rgb(59 130 246 / 0.1),
+      rgb(59 130 246 / 0.035) 34%,
+      transparent 68%
+    );
+  content: "";
+  mix-blend-mode: screen;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms var(--ease-out);
 }
 
 .magic-bento-grid > * {
@@ -168,6 +192,10 @@ pre {
 @media (hover: hover) and (pointer: fine) {
   .magic-bento-grid:hover::before {
     opacity: var(--bento-spotlight-opacity);
+  }
+
+  .magic-bento-grid:hover::after {
+    opacity: calc(var(--bento-spotlight-opacity) * 0.65);
   }
 
   .magic-bento-card:hover {
@@ -1149,6 +1177,7 @@ pre {
   }
 
   .magic-bento-grid::before,
+  .magic-bento-grid::after,
   .magic-bento-card::before {
     opacity: 0;
   }
