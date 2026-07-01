@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://code-quality-guardian.vercel.app/sitemap.xml
