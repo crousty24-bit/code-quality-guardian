@@ -6,8 +6,8 @@ export function Hero() {
     <section id="top" className="hero-section">
       <div className="page-shell hero-grid">
         <div className="hero-copy">
-          <p className="eyebrow">Agent Skill for existing codebases</p>
-          <h1>Govern how coding agents change code.</h1>
+          <h1>Code Quality Guardian Skill</h1>
+          <h2>Govern how coding agents change code.</h2>
           <p className="hero-summary">
             Inspect first, classify risk, bound the diff, and report verification honestly.
           </p>

@@ -6,7 +6,7 @@ export function Footer() {
       <div className="page-shell footer-grid">
         <div className="footer-brand">
           <img src="/logo-96.webp" alt="" width="32" height="32" loading="lazy" />
-          <span>Code Quality Guardian</span>
+          <span>Code Quality Guardian Skill</span>
         </div>
         <div className="footer-links">
           <a href={links.github} target="_blank" rel="noreferrer">

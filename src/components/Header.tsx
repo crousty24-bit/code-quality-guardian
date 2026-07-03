@@ -10,9 +10,9 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="page-shell flex h-16 items-center justify-between gap-6">
-        <a className="brand-link" href="#top" aria-label="Code Quality Guardian home">
+        <a className="brand-link" href="#top" aria-label="Code Quality Guardian Skill home">
           <img src="/logo-96.webp" alt="" width="36" height="36" />
-          <span>Code Quality Guardian</span>
+          <span>Code Quality Guardian Skill</span>
         </a>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Primary navigation">
